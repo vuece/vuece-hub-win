@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="VueceMusicHubApp" default="dist">
+	
+	<target name="debug">
+		<call target="expat" />
+	</target>
+	
+	<target name="jthread">
+		<msbuild project="${vuece.libjingle.ext.libproj.dir}/jthread/jthread.vcxproj" target="${vuece.build.option}">
+			<property name="Configuration" value="${solution.config}"/>
+			<property name="OutDir" value="${output.dir}"/>
+		</msbuild>
+	</target>
+	
+	<target name="expat" depends="jthread">
+		<msbuild project="${vuece.libjingle.ext.libproj.dir}/expat/lib/expat_static.vcxproj" target="${vuece.build.option}">
+			<property name="Configuration" value="${solution.config}"/>
+			<property name="OutDir" value="${output.dir}"/>
+		</msbuild>
+	</target>
+	
+	<target name="libjpeg" depends="expat">
+		<msbuild project="${vuece.libjingle.ext.libproj.dir}/libjpeg/jpeg-6b/libjpeg/libjpeg.vcxproj" target="${vuece.build.option}">
+			<property name="Configuration" value="${solution.config}"/>
+			<property name="OutDir" value="${output.dir}"/>
+		</msbuild>
+	</target>
+	
+	<target name="libjson" depends="libjpeg">
+		<msbuild project="${vuece.libjingle.ext.libproj.dir}/win/libjson/libjson.vcxproj" target="${vuece.build.option}">
+			<property name="Configuration" value="${solution.config}"/>
+			<property name="OutDir" value="${output.dir}"/>
+		</msbuild>
+	</target>
+	
+	<target name="tinyxml2" depends="libjson">
+		<msbuild project="${vuece.libjingle.ext.libproj.dir}\tinyxml2\tinyxml2-master\tinyxml2\tinyxml2.vcxproj" target="${vuece.build.option}">
+			<property name="Configuration" value="${solution.config}"/>
+			<property name="OutDir" value="${output.dir}"/>
+		</msbuild>
+	</target>
+	
+	<target name="zlib" depends="tinyxml2">
+		<msbuild project="${vuece.libjingle.ext.libproj.dir}\zlib\zlib\prj\zlib.vcxproj" target="${vuece.build.option}">
+			<property name="Configuration" value="${solution.config}"/>
+			<property name="OutDir" value="${output.dir}"/>
+		</msbuild>
+	</target>
+	
+	<target name="libpng" depends="zlib">
+		<msbuild project="${vuece.libjingle.ext.libproj.dir}\libpng\lpng162\projects\vs\libpng\libpng.vcxproj" target="${vuece.build.option}">
+			<property name="Configuration" value="${solution.config}"/>
+			<property name="OutDir" value="${output.dir}"/>
+		</msbuild>
+	</target>
+	
+	<target name="libsqlite3" depends="libpng">
+		<msbuild project="${vuece.libjingle.ext.libproj.dir}\sqlite\libsqlite3\libsqlite3.vcxproj" target="${vuece.build.option}">
+			<property name="Configuration" value="${solution.config}"/>
+			<property name="OutDir" value="${output.dir}"/>
+		</msbuild>
+	</target>
+	
+	<target name="taglib" depends="libsqlite3">
+		
+		<untar src="${vuece.libjingle.ext.libproj.dir}\taglib\taglib-1.8.tar.gz" dest="${vuece.win.dir}\nantbuild\" compression="gzip" />
+		
+		<exec program="cmake">
+			<arg value="-DENABLE_STATIC=ON" />
+			<arg value="-DENABLE_STATIC_RUNTIME=ON" />
+			<arg value="-DZLIB_INCLUDE_DIR=${vuece.libjingle.ext.libproj.dir}\zlib\zlib\include" />
+			<arg value="-DZLIB_LIBRARY=${vuece.libjingle.ext.libproj.dir}\zlib\zlib" />
+			<arg value="-G" />
+			<arg value="Visual Studio 10" />
+			
+			<arg value="${vuece.win.dir}\nantbuild\\taglib-1.8" />
+		</exec>
+		
+		<msbuild project="${vuece.win.dir}\\nantbuild\\taglib\\tag.vcxproj" target="${vuece.build.option}">
+			<property name="Configuration" value="${solution.config}"/>
+			<property name="OutDir" value="${output.dir}"/>
+		</msbuild>
+		
+	</target>	
+	
+	<target name="libjingle" depends="taglib">
+		<msbuild project="${vuece.libjingle.dir}\libjingle\libjingle.vcxproj" target="${vuece.build.option}">
+			<property name="Configuration" value="${solution.config}"/>
+			<property name="OutDir" value="${output.dir}"/>
+		</msbuild>
+	</target>	
+	
+	<target name="vuecepc" depends="libjingle">
+		<msbuild project="${vuece.win.dir}\vuecepc\vuecepc.vcxproj" target="${vuece.build.option}">
+			<property name="Configuration" value="${solution.config}"/>
+			<property name="OutDir" value="${output.dir}"/>
+			<property name="AdditionalLibraryDirectories" value="${output.dir.exe}"/>
+		</msbuild>
+	</target>	
+	
+	<target name="init">
+		
+		<version buildtype="Increment" revisiontype="Increment" />
+		
+		<echo message="Version = ${buildnumber.version}" />
+		<echo message="major = ${buildnumber.major}" />
+		<echo message="minor = ${buildnumber.minor}" />
+		<echo message="build = ${buildnumber.build}" />
+		<echo message="revision = ${buildnumber.revision}" />
+			
+		<loadproperties file="deployment.properties" />
+		
+		<loadfile file="${vuece.version.file.header.in}" property="var1">
+		    <filterchain>
+		        <replacetokens>
+		             <token key="MAJOR" value="${buildnumber.major}" />
+					 <token key="MINOR" value="${buildnumber.minor}" />
+					 <token key="BUILD" value="${buildnumber.build}" />
+					 <token key="REV" value="${buildnumber.revision}" />
+		        	 <token key="COMPANY_NAME" value="${vuece.company.name}" />
+		        	 <token key="FILE_DESC" value="${vuece.file.description}" />
+	        	 	 <token key="COPY_RIGHT" value="${vuece.copyright}" />
+	        	 	 <token key="PROD_NAME" value="${vuece.product.name}" />
+	        	 	 <token key="WEB_URL" value="${vuece.web.url}" />
+		        </replacetokens>
+		    </filterchain>
+		</loadfile>		
+		<echo file="${vuece.version.file.header.out}">${var1}</echo>
+		
+		<loadfile file="${inno.version.file.in}" property="var2">
+	    <filterchain>
+	        <replacetokens>
+	             <token key="MAJOR" value="${buildnumber.major}" />
+				 <token key="MINOR" value="${buildnumber.minor}" />
+				 <token key="BUILD" value="${buildnumber.build}" />
+				 <token key="REV" value="${buildnumber.revision}" />
+	        </replacetokens>
+	    </filterchain>
+		</loadfile>		
+		<echo file="${inno.version.file.out}">${var2}</echo>
+		
+		<loadfile file="${inno.proj.rootdir.file.in}" property="var3">
+	    <filterchain>
+	        <replacetokens>
+	             <token key="PROJ_ROOT" value="${vuece.win.dir}" />
+	        </replacetokens>
+	    </filterchain>
+		</loadfile>		
+		<echo file="${inno.proj.rootdir.file.out}">${var3}</echo>
+		
+	</target>	
+	
+	<target name="post-clean" depends="vuecepc">
+	    <delete>
+	      <fileset basedir=".">
+	        <include name="**/*" />
+	        <include name="cmake_install.cmake" />
+	        <exclude name="nant.build" />
+	        <exclude name="build.number" />
+	        <exclude name="deployment.properties" />
+	        <exclude name="deployment.properties.in" />
+	        <exclude name="deployment.properties.shunde.in" />
+	      </fileset>
+	    </delete>
+	    
+	   <delete dir="taglib-1.8">
+	   </delete>
+	</target>
+	
+	<target name="dist" depends="init, post-clean">
+		<exec program="${inno.exe}">
+			<arg value="${vuece.inno.script}" />
+		</exec>
+	</target>	
+	
+</project>

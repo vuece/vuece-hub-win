@@ -1,0 +1,4 @@
+#define VersionMajor "@MAJOR@"
+#define VersionMinor "@MINOR@"
+#define BuildNumber "@BUILD@"
+#define RevisionNumber "@REV@"

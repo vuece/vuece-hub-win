@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <VueceExternals>e:\vuece-libjingle\externals\</VueceExternals>
+    <VueceLibJingleLocation>e:\vuece-libjingle\libjingle\</VueceLibJingleLocation>
+    <VueceClientCoreLocation>e:\vuece-libjingle\client-core</VueceClientCoreLocation>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="VueceExternals">
+      <Value>$(VueceExternals)</Value>
+    </BuildMacro>
+    <BuildMacro Include="VueceLibJingleLocation">
+      <Value>$(VueceLibJingleLocation)</Value>
+    </BuildMacro>
+    <BuildMacro Include="VueceClientCoreLocation">
+      <Value>$(VueceClientCoreLocation)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

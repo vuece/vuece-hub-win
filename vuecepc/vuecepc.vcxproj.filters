@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{51b3dab7-38d3-45e5-bb67-8739aef5cedd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\client">
+      <UniqueIdentifier>{269c1ee1-9f71-40b3-bb54-fa038ea13bcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\json">
+      <UniqueIdentifier>{930951f3-13a6-49e5-8f31-2747918b19bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core\disabled">
+      <UniqueIdentifier>{9acf5324-f330-44a6-af8d-028e8b6a4143}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="app.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VueceStrings.zh-CN" />
+    <None Include="res\logo_ico\applogo_v4_blue.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\logo_ico\applogo_gray.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\logo_ico\applogo_blue.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\audio\musical_branding_signature_logo_synth_keys_chime.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\logo_ico\applogo_v4_blue_dark.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="vuecepc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AssemblyInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\friendinvitesendtask.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\jingleinfotask.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\presenceouttask.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\presencepushtask.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\rosterqueryresultrecvtask.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\rosterquerysendtask.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\RosterSubResponseRecvTask.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\vhubgettask.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\vhubresulttask.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="client\VueceJingleClientThread.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="client\jsoncpp.cpp">
+      <Filter>Source Files\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\vuecemediaitem.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\chatpushtask.cc">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\discoitemsquerytask.cc">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\mucinviterecvtask.cc">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\mucinvitesendtask.cc">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\vcardpushtask.cc">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\voicemailjidrequester.cc">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceConnectionKeeper.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="client\VueceCrypt.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceKeyValuePair.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceMediaDBManager.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceMediaDBScannerThread.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="VueceProgressDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="client\VueceConnectionMonitorThread.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="VueceAboutDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VueceUpdateDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceSessionClientManager.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceWinUtilities.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="client\VueceNativeClientImplWin.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceNativeInterface.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceCommon.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\DebugLog.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceCoreClient.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceLogger.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceKernelShell.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="VueceAuthDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceGlobalContext.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceThreadUtil.cc">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\friendinvitesendtask.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\jingleinfotask.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\muc.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\presenceouttask.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\presencepushtask.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\rosterqueryresultrecvtask.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\rosterquerysendtask.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\RosterSubResponseRecvTask.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\status.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vhubgettask.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vhubresulttask.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceGlobalSetting.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VuecePluginCommand.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceVideoCommon.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vuecevideosize.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vuececonstants.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="client\VueceJingleClientThread.h">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="client\json\json.h">
+      <Filter>Source Files\json</Filter>
+    </ClInclude>
+    <ClInclude Include="client\json\json-forwards.h">
+      <Filter>Source Files\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vuecemediaitem.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\chatpushtask.h">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\discoitemsquerytask.h">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\mucinviterecvtask.h">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\mucinvitesendtask.h">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vcardpushtask.h">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\voicemailjidrequester.h">
+      <Filter>Source Files\core\disabled</Filter>
+    </ClInclude>
+    <ClInclude Include="client\VueceDirectoryMonitor.h">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceConnectionKeeper.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="client\VueceUI.h">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="client\VueceCrypt.h">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceMediaDBManager.h">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceMediaDBScannerThread.h">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="VueceProgressDialog.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="client\VueceProgressUI.h">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\externals\cimage\CImg-1.5.5\CImg.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="client\VueceConnectionMonitorThread.h">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="VuecePCMainForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VueceAboutDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VueceUpdateDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceSessionClientManager.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceWinUtilities.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="client\VueceNativeClientImplWin.h">
+      <Filter>Source Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceNativeInterface.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceCommon.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\DebugLog.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceCoreClient.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceLogger.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceKernelShell.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="VueceAuthDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceThreadUtil.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="VueceHubVersion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VueceStrings.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceStrings.zh-CN.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceProgressDialog.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VuecePCMainForm.resX">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VuecePCMainForm.zh.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceAboutDialog.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceAboutDialog.zh.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceUpdateDialog.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceUpdateDialog.zh.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceAuthDialog.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceProgressDialog.zh.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceAuthDialog.zh.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

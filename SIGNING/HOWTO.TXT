@@ -1,0 +1,29 @@
+Refer to https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx
+
+
+1. Generate cert
+"C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\MakeCert" /n "CN=Vuece Technology" /r /h 0 /eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" /e 03/05/2016 /sv VueceHub.pvk VueceHub.cer
+
+2. Generate pfx
+"C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\Pvk2Pfx" /pvk VueceHub.pvk /pi 1111 /spc VueceHub.cer /pfx VueceHub.pfx
+
+3. Sign the file from innosetup
+Sign with timestamp
+"C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\signtool.exe" sign /f "C:\Users\jj\git\vuece-hub-win\SIGNING\VueceHub.pfx" /t http://timestamp.comodoca.com/authenticode /p 1111 $f
+
+Sign without timestamp
+"C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\signtool.exe" sign /f "C:\Users\jj\git\vuece-hub-win\SIGNING\VueceHub.pfx" /p 1111 $f
+
+
+command line testing:
+
+"C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\signtool.exe" sign /f "C:\Users\jj\git\vuece-hub-win\SIGNING\VueceHub.pfx" /p 1111 "C:\Users\jj\git\vuece-hub-win\Release\vuecepc.exe"
+
+
+Welcome to the C·O·M·O·D·O· CA Authenticode Timestamping Service.
+
+To use this service, please run the Microsoft Authenticode signature utility called either signcode.exe or signtool.exe.
+
+When the signature utility prompts you for a "Timestamp service URL", enter http://timestamp.comodoca.com/authenticode in the space provided.
+
+

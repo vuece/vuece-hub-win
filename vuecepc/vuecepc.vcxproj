@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E99967E9-0789-4232-A6BB-6A91359DE985}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>vuecepc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfAtl>false</UseOfAtl>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Vuece Libraries.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Vuece Libraries.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;FEATURE_ENABLE_SSL;JSON_DEBUG;HAVE_STDINT_H=1;EXPAT_RELATIVE_PATH;VUECE_APP_ROLE_HUB;_CRT_SECURE_NO_WARNINGS;VUECE_LOG_LEVEL=0;LOGGING;VCARD_ENABLED=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(ProjectDir)client;$(VueceLibJingleLocation);$(VueceLibJingleLocation)\talk\session\fileshare;$(VueceLibJingleLocation)\talk\base;$(VueceLibJingleLocation)\talk;$(VueceClientCoreLocation);$(VueceExternals)expat\;$(VueceExternals)win\libjson;$(VueceExternals)win\libjson\Source;$(VueceExternals)jthread\src;$(VueceExternals)win\ffmpeg\include;$(VueceExternals)win\ffmpeg\include\libavcodec;$(VueceExternals)win\ffmpeg\include\libavcore;$(VueceExternals)win\ffmpeg\include\libavdevice;$(VueceExternals)win\ffmpeg\include\libavfilter;$(VueceExternals)win\ffmpeg\include\libavformat;$(VueceExternals)win\ffmpeg\include\libavutil;$(VueceExternals)win\ffmpeg\\include\libswscale;$(VueceExternals)taglib\taglib-1.8\;$(VueceExternals)taglib\taglib-1.8\taglib;$(VueceExternals)taglib\taglib-1.8\taglib\toolkit;$(VueceExternals)taglib\taglib-1.8\taglib\ape;$(VueceExternals)taglib\taglib-1.8\taglib\asf;$(VueceExternals)taglib\taglib-1.8\taglib\flac;$(VueceExternals)taglib\taglib-1.8\taglib\it;$(VueceExternals)taglib\taglib-1.8\taglib\mod;$(VueceExternals)taglib\taglib-1.8\taglib\mp4;$(VueceExternals)taglib\taglib-1.8\taglib\mpc;$(VueceExternals)taglib\taglib-1.8\taglib\mpeg;$(VueceExternals)taglib\taglib-1.8\taglib\ogg;$(VueceExternals)taglib\taglib-1.8\taglib\riff;$(VueceExternals)taglib\taglib-1.8\taglib\s3m;$(VueceExternals)taglib\taglib-1.8\taglib\trueaudio;$(VueceExternals)taglib\taglib-1.8\taglib\wavpack;$(VueceExternals)taglib\taglib-1.8\taglib\mpeg\id3v2;$(VueceExternals)taglib\taglib-1.8\taglib\mpeg\id3v2\frames;$(VueceExternals)taglib\taglib-1.8\taglib\xm;$(VueceExternals)tinyxml2\tinyxml2-master;$(VueceExternals)sqlite;$(VueceExternals)libpng\lpng162;$(VueceExternals)libjpeg\jpeg-6b;$(VueceExternals)cimage\CImg-1.5.5;$(ProjectDir);C:\OpenSSL-Win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsManaged>true</CompileAsManaged>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>delayimp.lib;qwave.lib;expat_static.lib;winmm.lib;Vfw32.lib;avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;swscale.lib;libeay32MTd.lib;ssleay32MTd.lib;jthread.lib;libjingle.lib;tag.lib;tinyxml2.lib;crypt32.lib;Rpcrt4.lib;libsqlite3.lib;zlib.lib;libjpeg.lib;libpng.lib;Sensapi.lib;Secur32.lib;Wininet.lib;Winhttp.lib;libjson.lib;Ws2_32.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+      <AdditionalLibraryDirectories>$(VueceExternals)win\ffmpeg\lib;$(SolutionDir)\$(Configuration)\;C:\OpenSSL-Win32\lib\VC;C:\OpenSSL-Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>__DllMainCRTStartup@12;%(ForceSymbolReferences)</ForceSymbolReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;FEATURE_ENABLE_SSL;HAVE_STDINT_H=1;EXPAT_RELATIVE_PATH;VUECE_APP_ROLE_HUB;VUECE_LOG_LEVEL=99;VCARD_ENABLED=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(ProjectDir)client;$(VueceLibJingleLocation);$(VueceLibJingleLocation)\talk\base;$(VueceLibJingleLocation)\talk;$(VueceLibJingleLocation)..\client-core;$(VueceExternals)expat\;$(VueceExternals)libsrtp\include;$(VueceExternals)libsrtp\crypto\include;$(VueceExternals)oRTP\include;$(VueceExternals)win\libjson;$(VueceExternals)win\libjson\Source;$(VueceExternals)mediastreamer-2.8.2\include;$(VueceExternals)jthread\src;$(VueceExternals)win\ffmpeg\include;$(VueceExternals)win\ffmpeg\include\libavcodec;$(VueceExternals)win\ffmpeg\include\libavcore;$(VueceExternals)win\ffmpeg\include\libavdevice;$(VueceExternals)win\ffmpeg\include\libavfilter;$(VueceExternals)win\ffmpeg\include\libavformat;$(VueceExternals)win\ffmpeg\include\libavutil;$(VueceExternals)win\ffmpeg\\include\libswscale;$(VueceExternals)taglib\taglib-1.8\;$(VueceExternals)taglib\taglib-1.8\taglib;$(VueceExternals)taglib\taglib-1.8\taglib\toolkit;$(VueceExternals)taglib\taglib-1.8\taglib\ape;$(VueceExternals)taglib\taglib-1.8\taglib\asf;$(VueceExternals)taglib\taglib-1.8\taglib\flac;$(VueceExternals)taglib\taglib-1.8\taglib\it;$(VueceExternals)taglib\taglib-1.8\taglib\mod;$(VueceExternals)taglib\taglib-1.8\taglib\mp4;$(VueceExternals)taglib\taglib-1.8\taglib\mpc;$(VueceExternals)taglib\taglib-1.8\taglib\mpeg;$(VueceExternals)taglib\taglib-1.8\taglib\ogg;$(VueceExternals)taglib\taglib-1.8\taglib\riff;$(VueceExternals)taglib\taglib-1.8\taglib\s3m;$(VueceExternals)taglib\taglib-1.8\taglib\trueaudio;$(VueceExternals)taglib\taglib-1.8\taglib\wavpack;$(VueceExternals)taglib\taglib-1.8\taglib\mpeg\id3v2;$(VueceExternals)taglib\taglib-1.8\taglib\mpeg\id3v2\frames;$(VueceExternals)taglib\taglib-1.8\taglib\xm;$(VueceExternals)tinyxml2\tinyxml2-master;$(VueceExternals)sqlite;$(VueceExternals)libpng\lpng162;$(VueceExternals)libjpeg\jpeg-6b;$(VueceExternals)cimage\CImg-1.5.5;C:\OpenSSL-Win32\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <DisableSpecificWarnings>4305;4244;4793;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>delayimp.lib;qwave.lib;expat_static.lib;winmm.lib;Vfw32.lib;avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;swscale.lib;libeay32MTd.lib;ssleay32MTd.lib;jthread.lib;libjingle.lib;tag.lib;tinyxml2.lib;crypt32.lib;Rpcrt4.lib;libsqlite3.lib;zlib.lib;libjpeg.lib;libpng.lib;Sensapi.lib;ws2_32.lib;Iphlpapi.lib;Secur32.lib;Wininet.lib;Winhttp.lib;libjson.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>$(VueceExternals)win\ffmpeg\lib;$(SolutionDir)\$(Configuration);C:\OpenSSL-Win32\lib\VC;C:\OpenSSL-Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>__DllMainCRTStartup@12;%(ForceSymbolReferences)</ForceSymbolReferences>
+      <IgnoreSpecificDefaultLibraries>LIBCPMT.LIB;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.ico" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\audio\musical_branding_signature_logo_synth_keys_chime.wav" />
+    <None Include="res\logo_ico\applogo_blue.ico" />
+    <None Include="res\logo_ico\applogo_gray.ico" />
+    <None Include="res\logo_ico\applogo_v4_blue.ico" />
+    <None Include="res\logo_ico\applogo_v4_blue_dark.ico" />
+    <None Include="VueceStrings.zh-CN" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\chatpushtask.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\DebugLog.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\discoitemsquerytask.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\friendinvitesendtask.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\jingleinfotask.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\mucinviterecvtask.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\mucinvitesendtask.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\presenceouttask.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\presencepushtask.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\rosterqueryresultrecvtask.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\rosterquerysendtask.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\RosterSubResponseRecvTask.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\vcardpushtask.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\vhubgettask.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\vhubresulttask.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\voicemailjidrequester.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceCommon.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceConnectionKeeper.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceCoreClient.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceGlobalContext.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceKernelShell.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceKeyValuePair.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceLogger.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceMediaDBManager.cpp" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceMediaDBScannerThread.cpp" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\vuecemediaitem.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceNativeInterface.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceSessionClientManager.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceThreadUtil.cc" />
+    <ClCompile Include="..\..\vuece-libjingle\client-core\VueceWinUtilities.cc" />
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="client\jsoncpp.cpp" />
+    <ClCompile Include="client\VueceConnectionMonitorThread.cpp" />
+    <ClCompile Include="client\VueceCrypt.cpp" />
+    <ClCompile Include="client\VueceJingleClientThread.cpp" />
+    <ClCompile Include="client\VueceNativeClientImplWin.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="VueceAboutDialog.cpp" />
+    <ClCompile Include="VueceAuthDialog.cpp" />
+    <ClCompile Include="vuecepc.cpp" />
+    <ClCompile Include="VueceProgressDialog.cpp" />
+    <ClCompile Include="VueceUpdateDialog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\chatpushtask.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\DebugLog.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\discoitemsquerytask.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\friendinvitesendtask.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\jingleinfotask.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\muc.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\mucinviterecvtask.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\mucinvitesendtask.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\presenceouttask.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\presencepushtask.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\rosterqueryresultrecvtask.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\rosterquerysendtask.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\RosterSubResponseRecvTask.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\status.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vcardpushtask.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vhubgettask.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vhubresulttask.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\voicemailjidrequester.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceCommon.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceConnectionKeeper.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vuececonstants.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceCoreClient.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceGlobalSetting.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceKernelShell.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceLogger.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceMediaDBManager.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceMediaDBScannerThread.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vuecemediaitem.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceNativeInterface.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VuecePluginCommand.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceSessionClientManager.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceThreadUtil.h" />
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceVideoCommon.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\vuecevideosize.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\vuece-libjingle\client-core\VueceWinUtilities.h" />
+    <ClInclude Include="..\..\vuece-libjingle\externals\cimage\CImg-1.5.5\CImg.h" />
+    <ClInclude Include="client\json\json-forwards.h" />
+    <ClInclude Include="client\json\json.h" />
+    <ClInclude Include="client\VueceConnectionMonitorThread.h" />
+    <ClInclude Include="client\VueceCrypt.h" />
+    <ClInclude Include="client\VueceDirectoryMonitor.h" />
+    <ClInclude Include="client\VueceJingleClientThread.h" />
+    <ClInclude Include="client\VueceNativeClientImplWin.h" />
+    <ClInclude Include="client\VueceProgressUI.h" />
+    <ClInclude Include="client\VueceUI.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="VueceAboutDialog.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VueceAuthDialog.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VueceHubVersion.h" />
+    <ClInclude Include="VuecePCMainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="VueceProgressDialog.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VueceUpdateDialog.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VueceAboutDialog.resx">
+      <DependentUpon>VueceAboutDialog.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceAboutDialog.zh.resx">
+      <DependentUpon>VueceAboutDialog.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceAuthDialog.resx">
+      <DependentUpon>VueceAuthDialog.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceAuthDialog.zh.resx">
+      <DependentUpon>VueceAuthDialog.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VuecePCMainForm.resX">
+      <DependentUpon>VuecePCMainForm.h</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VuecePCMainForm.zh.resx">
+      <DependentUpon>VuecePCMainForm.h</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceProgressDialog.resx">
+      <DependentUpon>VueceProgressDialog.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceProgressDialog.zh.resx">
+      <DependentUpon>VueceProgressDialog.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceStrings.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceStrings.zh-CN.resx" />
+    <EmbeddedResource Include="VueceUpdateDialog.resx">
+      <DependentUpon>VueceUpdateDialog.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VueceUpdateDialog.zh.resx">
+      <DependentUpon>VueceUpdateDialog.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

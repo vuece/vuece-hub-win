@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="applogo_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>res\logo_ico\applogo_blue.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="applogo_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>res\logo_ico\applogo_gray.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OATH2_REQ_URL" xml:space="preserve">
+    <value>https://accounts.google.com/o/oauth2/auth?hl=zh-CN&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgoogletalk+email&amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=code&amp;client_id=489257891728-rftvnu18uv50q61qjrq5quu3b1p9s54s.apps.googleusercontent.com</value>
+  </data>
+  <data name="String0_SignIn" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="String10_RemoveAllSharedFolders_Warning" xml:space="preserve">
+    <value>您确定要移除所有的共享文件夹吗？</value>
+  </data>
+  <data name="String10_ScanDialogLable" xml:space="preserve">
+    <value>Vuece音乐盒正在扫描您的共享文件夹，请稍候...</value>
+  </data>
+  <data name="String11_RemoveAllSharedFolders_Warning_Title" xml:space="preserve">
+    <value>移除所有共享文件夹</value>
+  </data>
+  <data name="String11_ScanButListEmpty" xml:space="preserve">
+    <value>你的共享文件夹列表还是空的，请先添加共享文件夹，再进行扫描</value>
+  </data>
+  <data name="String12_ScanButListEmptyDlgTitle" xml:space="preserve">
+    <value>请先添加共享文件夹</value>
+  </data>
+  <data name="String13_SignInButNoSharedFolderDlgTitle" xml:space="preserve">
+    <value>请在登录前指定您想要共享的文件夹</value>
+  </data>
+  <data name="String14_SignInButNoSharedFolderDlgLable" xml:space="preserve">
+    <value>您还没有指定任何共享文件夹</value>
+  </data>
+  <data name="String15_ScanDialogLable_BeforeSigin" xml:space="preserve">
+    <value>Vuece音乐盒正在为您的登录做准备，请稍候...</value>
+  </data>
+  <data name="String16_ConnectionFailedWithAutoReconnect" xml:space="preserve">
+    <value>您的网络连接当前不可用，Vuece将在网络可用时自动进行重新登录</value>
+  </data>
+  <data name="String17_NoAvailableNetworkConnection" xml:space="preserve">
+    <value>没有可用的网络连接</value>
+  </data>
+  <data name="String18_UserPressedSignInBtnWithoutConnection" xml:space="preserve">
+    <value>对不起，由于没有可用的网络连接，Vuece音乐盒无法登陆，请稍候再试。</value>
+  </data>
+  <data name="String19_VueceHubOnlineNow" xml:space="preserve">
+    <value>您的Vuece音乐盒已成功上线！</value>
+  </data>
+  <data name="String1_SigningIn" xml:space="preserve">
+    <value>正在登录...</value>
+  </data>
+  <data name="String20_ClickToRestoreWindow" xml:space="preserve">
+    <value>单击此图标以显示程序主窗口</value>
+  </data>
+  <data name="String21_Link_CannotAccessGoogleAccount" xml:space="preserve">
+    <value>https://www.google.com/accounts/recovery?hl=zh-CN</value>
+  </data>
+  <data name="String22_Link_CreateNewGoogleAccount" xml:space="preserve">
+    <value>https://accounts.google.com/SignUp?hl=zh-CN</value>
+  </data>
+  <data name="String23_MainWinTitle" xml:space="preserve">
+    <value>Vuece音乐盒</value>
+  </data>
+  <data name="String24_AskUpdate" xml:space="preserve">
+    <value>检测到可用的更新，您想下载最新版本的Vuece音乐盒吗？</value>
+  </data>
+  <data name="String24_AskUpdateTitle" xml:space="preserve">
+    <value>有可用的更新！</value>
+  </data>
+  <data name="String25_NoNeedUpdateTitle" xml:space="preserve">
+    <value>暂时没有更新</value>
+  </data>
+  <data name="String26_NoNeedUpdate" xml:space="preserve">
+    <value>您已经在运行最新版本的Vuece音乐盒! 请过一段时间再检查更新，谢谢您的支持！</value>
+  </data>
+  <data name="String27_AskUnlink" xml:space="preserve">
+    <value>确实要取消当前帐户和Vuece音乐盒的关联吗？</value>
+  </data>
+  <data name="String27_AskUnlinkTitle" xml:space="preserve">
+    <value>取消关联Vuece音乐盒？</value>
+  </data>
+  <data name="String28_Unlinking" xml:space="preserve">
+    <value>正在取消关联...</value>
+  </data>
+  <data name="String29_SigningOut" xml:space="preserve">
+    <value>正在登出...</value>
+  </data>
+  <data name="String2_SignOut" xml:space="preserve">
+    <value>注销</value>
+  </data>
+  <data name="String30_Unlink" xml:space="preserve">
+    <value>点击此处取消关联...</value>
+  </data>
+  <data name="String31_PleaseLink" xml:space="preserve">
+    <value>请先关联你的Google帐户</value>
+  </data>
+  <data name="String32_ClickToLink" xml:space="preserve">
+    <value>点击此处关联您的帐户...</value>
+  </data>
+  <data name="String33_NoLinkedAccount" xml:space="preserve">
+    <value>目前暂无关联的帐户</value>
+  </data>
+  <data name="String34_PleaseWait" xml:space="preserve">
+    <value>请稍等...</value>
+  </data>
+  <data name="String35_LinkErrTitle" xml:space="preserve">
+    <value>帐户关联失败</value>
+  </data>
+  <data name="String36_LinkErrMsg" xml:space="preserve">
+    <value>对不起，帐户关联过程中发生了错误，请重试。</value>
+  </data>
+  <data name="String37_UnlinkOkTitle" xml:space="preserve">
+    <value>成功取消关联</value>
+  </data>
+  <data name="String38_UnlinkOkMsg" xml:space="preserve">
+    <value>Vuece音乐盒成功取消了你的帐户关联</value>
+  </data>
+  <data name="String39_UnlinkErrTitle" xml:space="preserve">
+    <value>取消帐户关联失败</value>
+  </data>
+  <data name="String3_LoginFailedTitle" xml:space="preserve">
+    <value>无法登录</value>
+  </data>
+  <data name="String40_UnlinkErrTitle" xml:space="preserve">
+    <value>Vuece音乐盒成功目前暂时无法取消你的帐户关联，请稍后再试。</value>
+  </data>
+  <data name="String41_Authorizing" xml:space="preserve">
+    <value>正在授权...</value>
+  </data>
+  <data name="String4_LoginFailedMessage" xml:space="preserve">
+    <value>请确保您输入了正确的用户名和密码</value>
+  </data>
+  <data name="String8_Scanning" xml:space="preserve">
+    <value>正在扫描</value>
+  </data>
+  <data name="String9_UpdatingDb" xml:space="preserve">
+    <value>正在更新歌曲信息库，请稍候...</value>
+  </data>
+  <data name="String42_YourCurAccount" xml:space="preserve">
+    <value>您当前的帐户：</value>
+  </data>
+</root>
