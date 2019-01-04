@@ -24,7 +24,6 @@
 #include "talk/base/stringdigest.h"
 #include "talk/session/fileshare/VueceMediaStream.h"
 
-
 #include "VueceCoreClient.h"
 
 #include "VueceConstants.h"
@@ -46,26 +45,9 @@ using namespace vuece;
 static const int DEFAULT_PORT = 5222;
 
 VueceNativeClientImplWin::VueceNativeClientImplWin(vuece::InitData* init_data) {
-
 	LOG(INFO) << "VueceNativeClientImplWin()";
 	client = NULL;
 	exitReason = VueceEvent_Client_SignedOut;
-
-//	std::string path_s("C:\\Users\\jj\\Pictures\\XXX.jpg");
-//
-//	talk_base::Pathname path(path_s);
-//
-//	LOG(LS_VERBOSE) << "TEST - pathname is: " << path.pathname();
-//	LOG(LS_VERBOSE) << "TEST - url is: " << path.url();
-//	LOG(LS_VERBOSE) << "TEST - folder is: " << path.folder();
-//	LOG(LS_VERBOSE) << "TEST - folder_name is: " << path.folder_name();
-//	LOG(LS_VERBOSE) << "TEST - parent_folder is: " << path.parent_folder();
-//	LOG(LS_VERBOSE) << "TEST - basename is: " << path.basename();
-//	LOG(LS_VERBOSE) << "TEST - extension is: " << path.extension();
-//	LOG(LS_VERBOSE) << "TEST - filename is: " << path.filename();
-
-	//TestMusicStreaming();
-
 }
 
 VueceNativeClientImplWin::~VueceNativeClientImplWin() {
@@ -114,16 +96,6 @@ int VueceNativeClientImplWin::InitiateMediaStream(
 	//here we use ascii code FS to separate param1 and param2 and param3 in one string
 	switch(stream_type)
 	{
-	/*
-	 * 		const std::string& share_id,
-		const std::string& jid,
-		const std::string& targetUri,
-		const std::string& width,
-		const std::string& height,
-		const std::string& preview_file_path,
-		const std::string& start_pos,
-		const std::string& need_preview,
-	 */
 		case VueceStreamType_File:
 		{
 			errCode = client->SendFile(share_id, jid, targetUri, width, height, preview_file_path, start_pos, need_preview);
@@ -250,7 +222,6 @@ int VueceNativeClientImplWin::Start(const char* name, const char* pwd,  const in
 		return RESULT_FUNC_NOT_ALLOWED;
 	}
 
-	//bbbbbbbbbbbbbbbbbbbbbbbb
 	client = new VueceCoreClient(this, name);
 
     SigVueuceCommandMessage.connect(client, &VueceCoreClient::OnVueceCommandReceived);
@@ -524,23 +495,6 @@ void VueceNativeClientImplWin::OnVHubGetMessageReceived(const buzz::Jid& jid, co
 			message.append("'}");
 
 			client->SendVHubMessage(jid.Str().c_str(), "result", message);
-
-		//TODO - TEST CODE REMOVE LAER
-		//Test normal file transfer
-//		InitiateMediaStream(
-//				talk_base::ToString(talk_base::CreateRandomId()), //session id
-//				jid.Str(), //jid
-//				"P:\\Dropbox\\Photos\\IMG_0085.JPG", //file path
-//				"0", //image width
-//				"0", //image height
-//				"", //preview image path
-//				"0", //start position in seconds
-//				"0",
-//				VueceStreamType_File
-//				);
-
-		//DB transfer test code - remove later
-//		ShareMusicDBFile(jid);
 	}
 	else if (action.compare("browse")==0)
 	{
@@ -554,19 +508,6 @@ void VueceNativeClientImplWin::OnVHubGetMessageReceived(const buzz::Jid& jid, co
 		{
 			std::ostringstream resp;
 
-			//TODO - Since we are using md5 string now, we don't need to base64 coded item id.
-//----------------------------------------------------------------------------------------------
-//			Test code - keep it for now
-//			std::string samplemsg = "{'action':'browse','reply':'ok','category':'music','list':[";
-//			samplemsg.append("{'name':'The Man Comes Around','bitrate':192,'artist':'Johnny Cash','album':'Johnny Cash','length':267,'size':5049287,'uri':'The Man Comes Around.flv'},");
-//			samplemsg.append("{'name':'Adele - Someone Like You','bitrate':128,'artist':'Adele','album':'Adele','length':284,'size':4550819,'uri':'Adele - Someone Like You.mp3'},");
-//			samplemsg.append("{'name':'GLAY  I LOVE YOU','bitrate':128,'artist':'GLAY','album':'GLAY','length':317,'size':32134370,'uri':'GLAY  I LOVE YOU.flv'},");
-//			samplemsg.append("{'name':'PSY - GANGNAM STYLE MV','bitrate':128,'artist':'PSY','album':'PSY','length':252,'size':183190475 ,'uri':'PSY - GANGNAM STYLE MV.mp4'},");
-//			samplemsg.append("{'name':'Coldplay - Paradise','bitrate':192,'artist':'Coldplay','album':'Coldplay','length':260,'size':9162070,'uri':'Coldplay - Paradise.mp3'}]}");
-//			client->SendVHubMessage(jid.Str().c_str(), "result", samplemsg);
-//----------------------------------------------------------------------------------------------
-
-			//DB version:
 			LOG(INFO) << "VueceNativeClientImplWin::VHub Msg Received  - Start browsing target uri: " << uri;
 
 			client->BrowseMediaItem(uri, resp);
@@ -697,52 +638,11 @@ void VueceNativeClientImplWin::OnVHubResultMessageReceived(const buzz::Jid& jid,
 
 void VueceNativeClientImplWin::OnRosterSubRespReceived(VueceRosterSubscriptionMsg* m) {
 	LOG(LS_VERBOSE) << "OnRosterSubRespReceived";
-//	VueceRosterSubscriptionType type = VueceRosterSubscriptionType_NA;
-//
-//	std::string messageType = stanza->Attr(buzz::QN_TYPE);
-//	std::string from = stanza->Attr(buzz::QN_FROM);
-//
-//	LOG(LS_VERBOSE) << "OnRosterSubRespReceive::Source: " << from << ", type: " << messageType;
-//	VueceLogger::Warn("OnRosterSubRespReceive::Source: %s, type: %s", from.c_str(), messageType.c_str());
-//
-//	if (messageType == buzz::STR_SUBSCRIBED) {
-//		LOG(LS_VERBOSE) << "OnRosterSubRespReceived:Message type: subscribed";
-//		type = VueceRosterSubscriptionType_Subscribed;
-//	} else 	if (messageType == buzz::STR_SUBSCRIBE) {
-//		LOG(LS_VERBOSE) << "OnRosterSubRespReceived:Message type: subscribe";
-//		type = VueceRosterSubscriptionType_Subscribe;
-//	} else 	if (messageType == buzz::STR_UNSUBSCRIBE) {
-//		LOG(LS_VERBOSE) << "OnRosterSubRespReceived:Message type: unsubscribe";
-//		type = VueceRosterSubscriptionType_Unsubscribe;
-//	} else 	if (messageType == buzz::STR_UNSUBSCRIBED) {
-//		LOG(LS_VERBOSE) << "OnRosterSubRespReceived:Message type: unsubscribed";
-//		type = VueceRosterSubscriptionType_Unsubscribed;
-//	} else 	if (messageType == buzz::STR_UNAVAILABLE) {
-//		LOG(LS_VERBOSE) << "OnRosterSubRespReceived:Message type: unavailable";
-//		type = VueceRosterSubscriptionType_Unavailable;
-//	}
-//
-//	VueceRosterSubscriptionMsg m;
-//	memset(&m, 0, sizeof(m));
-//
-//	strcpy(m.user_id, from.c_str());
-//	m.subscribe_type = type;
-
 	SigRosterSubscriptionMsgReceived(m);
 }		
 
 void VueceNativeClientImplWin::OnRosterReceived(const buzz::XmlElement* stanza) {
 	LOG(INFO) << "OnRosterReceived - Do nothing";
-//	int rosterSize = 0;
-//	int len = 0;
-//	const buzz::XmlElement * query = stanza->FirstNamed(buzz::QN_ROSTER_QUERY);
-//	const buzz::XmlElement* rosterItem = query->FirstNamed(buzz::QN_ROSTER_ITEM);
-//	while (rosterItem) {
-//		//LOG(LS_VERBOSE) << "rosterItem: " << rosterItem->Str();
-//		rosterSize++;
-//		rosterItem = rosterItem->NextNamed(buzz::QN_ROSTER_ITEM);
-//	}
-
 }
 
 void VueceNativeClientImplWin::OnFileSharePreviewReceived(const std::string& share_id, const std::string& path, int w, int h)
@@ -883,6 +783,7 @@ buzz::Jid VueceNativeClientImplWin::GetCurrentJidInCall(void)
 	return jid;
 }
 
+//Test method
 void VueceNativeClientImplWin::TestMusicStreaming()
 {
 	//input not used for sender
