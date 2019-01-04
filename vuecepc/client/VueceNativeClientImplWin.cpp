@@ -117,18 +117,6 @@ int VueceNativeClientImplWin::InitiateMediaStream(
 	return errCode;
 }
 
-void VueceNativeClientImplWin::TestSendFile()
-{
-	LOG(LS_VERBOSE) << "VueceNativeClientImplWin::TestSendFile - Start";
-
-	std::string previewImagePath("C:\\Users\\jj\\Pictures\\1.JPG");
-	std::string start_position = "0";
-	std::string need_preview = "0";
-
-	LOG(LS_INFO) << "Preview image path is: " << previewImagePath ;
-}
-
-
 void VueceNativeClientImplWin::CancelFileShare(const std::string& share_id){
 	LOG(INFO) << "VueceNativeClientImplWin::CancelFileShare: " << share_id;
 	SigVueuceCommandMessage(VUECE_CMD_CANCEL_FILE, share_id.c_str());
@@ -191,8 +179,6 @@ void VueceNativeClientImplWin::SendPresence(const std::string& status, const std
 	client->SendPresence(status, signature);
 }
 
-
-
 void VueceNativeClientImplWin::SendSignature(const std::string& sig) {
 	if (client == NULL) {
 		return;
@@ -205,7 +191,6 @@ vuece::ClientState VueceNativeClientImplWin::GetClientState(void)
 {
 	return client->GetClientState();
 }
-
 
 int VueceNativeClientImplWin::Start(const char* name, const char* pwd,  const int auth_type) {
 
