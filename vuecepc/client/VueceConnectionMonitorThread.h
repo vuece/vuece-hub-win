@@ -8,11 +8,6 @@
 #ifndef VUECECONNECTIONMONITORTHREAD_H_
 #define VUECECONNECTIONMONITORTHREAD_H_
 
-//extern "C"
-//{
-//	#include "stdint.h"
-//}
-
 #include <gcroot.h>
 
 #include "talk/base/sigslot.h"
@@ -21,7 +16,6 @@
 #include "talk/base/messagequeue.h"
 #include "talk/base/scoped_ptr.h"
 #include "VueceUI.h"
-//
 
 typedef enum  VueceNetworkMonitorState{
 	VueceNetworkMonitorState_OnlineSignedIn = 0,

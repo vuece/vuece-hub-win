@@ -8,11 +8,6 @@
 #ifndef _VUECE_JINGLE_CLIENT_THREAD
 #define _VUECE_JINGLE_CLIENT_THREAD
 
-//extern "C"
-//{
-//	#include "stdint.h"
-//}
-
 #include <gcroot.h>
 #include "jthread.h"
 #include "talk/base/thread.h"
@@ -37,11 +32,8 @@ public:
 	void OnUserEvent(VueceEvent code);
 	void OnRemoteDeviceActivity(VueceStreamingDevice* d);
 	void OnRosterVCardReceived(const std::string&, const std::string&, const std::string&);
-//	void OnRosterSubscriptionMsgReceived(const std::string& jid, int type);
 
 	void OnRosterSubscriptionMsgReceived(VueceRosterSubscriptionMsg* m);
-
-
 
 	void OnFileSystemChanged();
 	void TestSendFile();

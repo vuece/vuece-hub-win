@@ -92,8 +92,6 @@ VueceConnectionMonitorThread* connectionMonitorThread;
 
 			VueceGlobalSetting* iVueceGlobalSetting = VueceGlobalContext::Instance();
 
-			//PlaySound(MAKEINTRESOURCE(IDR_WAVE1), GetModuleHandle(NULL), SND_RESOURCE | SND_ASYNC);
-
 			//
 			//TODO: Add the constructor code here
 			//
@@ -256,8 +254,6 @@ private: System::Windows::Forms::ImageList^  imageList_Icons;
 	private: System::Windows::Forms::GroupBox^  groupBoxSharedFolders;
 
 	private: System::Windows::Forms::FolderBrowserDialog^  publicFolderBrowserDialog;
-
-
 
 	private: System::IO::FileSystemWatcher^  publicFolderWatcher;
 

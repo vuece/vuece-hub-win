@@ -12,15 +12,6 @@ using namespace System::Security::Permissions;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-//[assembly:AssemblyTitleAttribute("vuecepcAA")];
-//[assembly:AssemblyDescriptionAttribute("Vuece Music HubA")];
-//[assembly:AssemblyConfigurationAttribute("")];
-//[assembly:AssemblyCompanyAttribute("Vuece TechnologyA")];
-//[assembly:AssemblyProductAttribute("Vuece Music HubA")];
-//[assembly:AssemblyCopyrightAttribute("Copyright(C)2015-2016 Vuece Inc. All Rights ReservedA")];
-//[assembly:AssemblyTrademarkAttribute("VueceA")];
-//[assembly:AssemblyCultureAttribute("")];
-
 //
 // Version information for an assembly consists of the following four values:
 //
