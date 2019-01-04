@@ -9,11 +9,10 @@
 #include <limits>
 #include <sstream>
 
-
-
 VueceCrypt::VueceCrypt(void) {
 	m_hProv = m_hHash = m_hKey = 0;
-	m_pszDefaultKeyRaw = "a_G-?=\\/Qj<L^1R3$t%lDEgkEJU|=t|cJb/(AhsR.~lmhYKslvbh64~<Z0H|CP]W";
+	// Use your own key here
+	m_pszDefaultKeyRaw = "********************";
 }
 
 BOOL VueceCrypt::SetKey(LPCSTR szKey, LPCSTR szSalt/*=0*/) {
@@ -76,7 +75,6 @@ BOOL VueceCrypt::EncryptDecrypt(BYTE* pData, DWORD* dwDataLen, LPCSTR pKey, BOOL
 
 std::string VueceCrypt::EncryptStrToHex(LPCSTR szText, LPCSTR pszKey/*= 0*/, LPCSTR pszSalt/*= 0*/) {
 	m_fOK = TRUE;
-	//    CString sRet= "";
 	std::string result;
 
 	DWORD nDataLen = strlen(szText);
