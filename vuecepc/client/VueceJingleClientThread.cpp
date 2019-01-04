@@ -55,8 +55,8 @@ void VueceJingleClientThread::SetAccount(const char* _userName, const char* pwd,
 	//////////////////////
 	//PLAIN AUTH - START (hard code your account here)
 	//test code - use following code to overwrite user name and use plain auth
-	//strcpy(userName, "vuecej@gmail.com");
-	//strcpy(userPwd, "jjalba123");
+	//strcpy(userName, "");
+	//strcpy(userPwd, "");
 	//auth_type = 1;
 	//PLAIN AUTH - END
 }
